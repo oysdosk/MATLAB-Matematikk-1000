@@ -1,7 +1,4 @@
-% Skript egg
-
-
-
+% Skript med målinger av egg
 
 a = 0;
 b = 5.5;
