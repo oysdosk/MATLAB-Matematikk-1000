@@ -2,6 +2,7 @@
 % Skriptet tar utgangspunkt i oppgave 7 fra uke 14, og sammenlikner det
 % eksakte svaret med svaret vi får fra Riemann-summen med selvvalgt antall
 % oppdelinger, N.
+% Når N øker, vil Riemann-summen nærme seg integralet. 
 
 % Funksjonen
 funk = @ (x) sqrt(4-x.^2);
@@ -20,9 +21,9 @@ N = input ('Skriv inn antall oppdelinger: ');
 deltaX = (b-a)/N;
 
 % Initierer summen R:
-Rv = 0;
-Rh = 0;
-Rm = 0;
+Rv = 0;             % Venstreseleksjon
+Rh = 0;             % Høyreseleksjon
+Rm = 0;             % Midtseleksjon
 
 % Utregning
 for n=1:N
@@ -43,8 +44,8 @@ Rg = (Rv + Rh) / 2;
 % Feil-initiering
 Feilv = abs(Rv - Fasit);
 Feilh = abs(Rh - Fasit);
-Feilm = abs(Rm - Fasit);
 Feilg = abs(Rg - Fasit);
+Feilm = abs(Rm - Fasit);
 
 % Utskrift
-disp (transpose([Rv Rh Rm; Feilv Feilh Feilm; 0 0 Feilg]))
+disp (transpose([Rv Rh Rg Rm; Feilv Feilh Feilg Feilm]))

@@ -1,41 +1,41 @@
-% Dette skriptet estimerar eit integral
-% med Simpsons metode.
-% Input er ein elementær funksjon, grensene
-% a og b og talet på delintervall i oppdelinga.
+% Skriptet estimerer et integral vha. Simpsons metode. 
+% Metoden likner på trapesmetoden, men bruker et andregradsplynom for å
+% tilnærme seg funksjonen i stedet for et trapes. Til det trengs tre
+% punkter fremfor 2 punkter på grafen. Feilen går som x^4. 
 
-% funksjonen
+% Funksjonen
 funk = @(x) sqrt(4-x^2);
 
-% Grenser
+% Startverdier
 a=0;            % Nedre grense
 b=sqrt(2);      % Øvre grense
 
-% Oppdeling - talet på delintervall
-N=input('Gi talet på delintervall: ');
+% Antall oppdelinger
+N = input ('Skriv inn antall oppdelinger: ');
 
-% Sjekkar at N er eit partal
-if mod(N,2)~=0
-  error('N må vere eit partal.')
+% Sjekker at N er et partall
+if mod(N,2) ~= 0
+  error('N må være et partall.')
 end
 
-% Breidda på kvart delintervall
-deltaX=(b-a)/N;
+% Bredden på delintervallene
+deltaX = (b-a)/N;
 
 % Første og siste ledd i trapes-summen 
-% (Vi gongar med DektaX/3 til slutt.)
-S=(funk(a)+funk(b)); 
+% (Ganger med deltaX/3 til slutt.)
+S = (funk(a)+funk(b)); 
 
-% Legg til alle ledd med oddetals-indeks
+% Legger til alle ledd med oddetals-indeks.
 for n=1:2:(N-1)
-  x = a + n*deltaX;             % Oppdaterar x
-  S = S + 4*funk(x);            % Oppdaterar summen, vekt 4
+  x = a + n*deltaX;             % Oppdaterer x
+  S = S + 4*funk(x);            % Oppdaterer summen, vekt 4
 end
 
-% Legg til alle ledd med partals-indeks (utanom det første og siste
+% Legger til alle ledd med partals-indeks bortsett fra første og siste.
 for n=2:2:(N-2)
   x = a + n*deltaX;             % Oppdaterar x
   S = S + 2*funk(x);            % Oppdaterar summen, vekt 2
 end
 
-% Skriv svaret til skjerm (med rett faktor - deltaX/3)
-S = S*deltaX/3
+% Uskrift (med rett faktor - deltaX/3)
+S = S * deltaX/3
