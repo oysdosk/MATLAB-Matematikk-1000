@@ -1,5 +1,5 @@
 % Fikspunktiterasjon
-% Får en likning på formen f(x) = x. x er et fikspunkt for funskjonen f.
+% Får en likning på formen f(x) = x. x er et fikspunkt for funksjonen f.
 
 % Metoden: 
 % 1. Velger xo

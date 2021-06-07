@@ -6,15 +6,6 @@ a = pi/3;
 % Avstanden mellom x og a:
 h=1;
 
-% Estimerer funksjonsverdien for stadig 
-% lavere/høyere h ved å bytte fortegn foran h:
-%for n=1:15
-   % x=a-h;
-   % f=(cos(x)-1/2)/(x-pi/3);
-   % disp([h f]);
-   % h=h/2;
- % end
-
 % Plotting: 
 
 % f blir ikke et tall for hver iterasjon, men en vektor

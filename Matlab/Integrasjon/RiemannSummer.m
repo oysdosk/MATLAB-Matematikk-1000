@@ -14,7 +14,7 @@ Fasit = pi/2 + 1;
 a = 0;
 b = sqrt(2);
 
-% Antall oppdelinger, rektangler
+% Antall oppdelinger
 N = input ('Skriv inn antall oppdelinger: ');
 
 % Bredden på hvert rektangel:

@@ -5,9 +5,9 @@ y=input('Skriv inn imaginær-verdien.');
 n=input('Skriv inn det komplekse tallets potensverdi');
 
 %Finner R og thetha for å sette opp uttrykk i for-løkken
-zn=(x+1i*y);
+zn=(x + 1i*y)^(1/n);
 r=abs(zn);
-tetha=angle(zn)+2*pi;
+tetha=angle(zn);
 
 % Oppsett av plot:
 
@@ -17,13 +17,18 @@ grid on
 axis square
 hold on
 
+
 % Plotting av løsningen:
 
-% for m=0:1:(n-1)
-  %  z=2*exp(i*pi/3+m*pi/2)
-  %  plot(real(z),imag(z),'x')
-% end
+for k=0:(n-1)
+    z = r * exp(1i * (1/n) * (tetha + k*2*pi))
+    plot(real(z),imag(z),'rx','linewidth',2)
+    hold on
+end
 
-m=0;
-z=(zn+2*m*pi)^(1/n)
-plot(real(z),imag(z),'x')
+% Plot av sirkel
+x = r * (-1:1e-2:1);
+y = sqrt(r^2 - x.^2);
+plot(x,y,'k--')
+plot(x,-y,'k--')
+axis square

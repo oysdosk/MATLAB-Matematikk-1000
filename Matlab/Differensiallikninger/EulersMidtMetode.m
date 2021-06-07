@@ -8,7 +8,7 @@ F = @(x, y) x^2 - x * sin(y);
 x0 = -2;
 y0 = 0;
 
-% Maksimal x-verdi, egenvalgt
+% Maksimal x-verdi
 xMax = 4; 
 
 % Antall steg i Eulers metode

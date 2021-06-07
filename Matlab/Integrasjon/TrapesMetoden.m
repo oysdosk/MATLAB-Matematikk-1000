@@ -20,7 +20,7 @@ N = input ('Skriv inn antall oppdelinger: ');
 deltaX = (b-a) / N;
 
 % Første og siste ledd i trapes-summen
-T = deltaX * (funk(a)+funk(b)) / 2;
+T = deltaX * (funk(a)+funk(b))*deltaX / 2;
 
 % Utregnig av de resterende leddene
 for n=1:(N-1)

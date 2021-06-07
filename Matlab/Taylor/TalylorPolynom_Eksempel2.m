@@ -7,7 +7,7 @@ x=0.5:1e-2:3;
 
 % Funksjonene fra regning på papir:
 f = @(x) exp((x-1)/2)+2*log(x);
-p0= @(x) 1*x.^0;    % Triks for å få samme format som vektoren
+p0= @(x) 1*x.^0;        % Triks for å få samme format som vektoren
 p1= @(x) p0(x) + 5/2*(x-1);
 p2= @(x) p1(x) - 7/8*(x-1).^2;
 p3= @(x) p2(x) + 11/16*(x-1).^3;

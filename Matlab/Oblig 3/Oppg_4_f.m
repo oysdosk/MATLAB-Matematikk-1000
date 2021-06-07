@@ -53,7 +53,7 @@ bVektor = b(xVektor).';
 % Totalmatrise: 
 T = [D + A, bVektor];           % bVektor legges til som en ekstra
                                 % søyle med indeks (N+1).
-% Oddaterer startkrav: 
+% Oppdaterer startkrav: 
 T(1,N+1) = T(1,N+1)+y0/(2*h);
 
 % Løser likingssystemet: 

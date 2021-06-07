@@ -8,7 +8,7 @@ E = @ (x) 2/3 * sqrt(exp(-0.1 * x) .* (9 - x.^2));
 dx = 1e-5;
 Ed = @(x) (E(x + dx) - E(x - dx)) / (2 * dx);
 
-% Implementasjon av formelen for volum av et omdreiningslegeme
+% Implementasjon av formelen for volum av et omdreiningslegeme om x-aksen
 funkV = @ (x) pi * E(x).^2;
 
 % Implementasjon av formelen for areal av et omdreiningslegeme
