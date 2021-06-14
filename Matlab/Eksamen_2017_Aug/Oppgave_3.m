@@ -10,4 +10,3 @@ grid on
 hold on
 plot(-x,funk(x))
 hold off
-

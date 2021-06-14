@@ -27,8 +27,8 @@ for k=0:(n-1)
 end
 
 % Plot av sirkel
-x = r * (-1:1e-2:1);
-y = sqrt(r^2 - x.^2);
-plot(x,y,'k--')
-plot(x,-y,'k--')
+xx = r * (-1:1e-2:1);
+yy = sqrt(r^2 - xx.^2);
+plot(xx,yy,'k-')
+plot(xx,-yy,'k-')
 axis square
